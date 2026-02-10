@@ -147,6 +147,18 @@
             overflow: hidden;
         }
 
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 55%;
+            height: 100%;
+            background: url('fotos/fachada-optica.jpg') center/cover no-repeat;
+            opacity: 0.15;
+            mask-image: linear-gradient(to left, rgba(0,0,0,0.4) 0%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.4) 0%, transparent 100%);
+        }
+
         .hero::before {
             content: '';
             position: absolute;
@@ -873,6 +885,7 @@
 
     <!-- HERO -->
     <section class="hero">
+        <div class="hero-bg-image"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
@@ -989,16 +1002,16 @@
                 </div>
                 <div class="social-images fade-in">
                     <div class="social-img">
-                        <img src="fotos/file_434---465f0b84-f5b8-473d-b5ac-72e4dbdae9a6.jpg" alt="Brigada visual en comunidad" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
+                        <img src="fotos/brigada-comunidad.jpg" alt="Brigada visual en comunidad" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
                     </div>
                     <div class="social-img">
-                        <img src="fotos/file_435---7d71454e-c6f3-4e5e-a2b2-ddf5724e7952.jpg" alt="Examen visual comunitario" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
+                        <img src="fotos/examen-visual-campo.jpg" alt="Examen visual comunitario" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
                     </div>
                     <div class="social-img">
-                        <img src="fotos/file_433---71a02ea9-1178-45cc-a281-1115b3e7cb54.jpg" alt="Servicio en comunidad" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
+                        <img src="fotos/brigada-exterior.jpg" alt="Servicio en comunidad" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
                     </div>
                     <div class="social-img">
-                        <img src="fotos/file_436---3edc585b-9243-4901-bca2-2ff270a8ac9f.jpg" alt="Consulta comunitaria" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
+                        <img src="fotos/consulta-lentes.jpg" alt="Consulta comunitaria" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
                     </div>
                 </div>
             </div>
@@ -1015,19 +1028,19 @@
             </div>
             <div class="gallery-grid fade-in">
                 <div class="gallery-item">
-                    <img src="fotos/file_437---9d807675-045a-4aa1-8acd-5dc30561d207.jpg" alt="Colección de armazones" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
+                    <img src="fotos/coleccion-armazones.jpg" alt="Colección de armazones" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
                 </div>
                 <div class="gallery-item">
-                    <img src="fotos/file_432---7cb94c70-e882-41b3-868b-68966b6f607e.jpg" alt="Servicio corporativo" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
+                    <img src="fotos/servicio-corporativo-1.jpg" alt="Servicio corporativo" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
                 </div>
                 <div class="gallery-item">
-                    <img src="fotos/file_442---d685a251-5405-4b13-9eac-6c8ccce39b69.jpg" alt="Atención en empresa" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
+                    <img src="fotos/servicio-corporativo-2.jpg" alt="Atención en empresa" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
                 </div>
                 <div class="gallery-item">
-                    <img src="fotos/file_444---5d4ade8a-d3f8-42c6-aa87-2eb761d5a9a6.jpg" alt="Consulta en óptica" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
+                    <img src="fotos/consulta-optica.jpg" alt="Consulta en óptica" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
                 </div>
                 <div class="gallery-item">
-                    <img src="fotos/file_446---379dccdd-b530-4650-baad-fbaf8406d294.jpg" alt="Fachada Óptica BEHA" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
+                    <img src="fotos/fachada-optica.jpg" alt="Fachada Óptica BEHA" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
                 </div>
             </div>
         </div>
@@ -1042,12 +1055,12 @@
                 <p class="section-subtitle">Brindamos servicio óptico corporativo a empresas líderes de la región</p>
             </div>
             <div class="clients-grid fade-in">
-                <img src="fotos/file_445---d5e43d9a-dd44-47b4-b5bc-d36cfce46710.jpg" alt="Nissan" class="client-logo">
-                <img src="fotos/file_439---2131e293-0e53-428e-91b6-5a75cdb2548e.jpg" alt="ATSA Birlos y Tuercas" class="client-logo">
-                <img src="fotos/file_440---3a1e16cc-7efb-4038-b77f-036a6fba4495.jpg" alt="EcoChem Industrial" class="client-logo">
-                <img src="fotos/file_441---c2d586b4-68a8-4185-87b7-40df0b5c14e8.jpg" alt="Avantive Solutions" class="client-logo">
-                <img src="fotos/file_443---400d3eda-fbef-4cfc-8a9b-584963923487.jpg" alt="Escuela Normal de Jalisco" class="client-logo">
-                <img src="fotos/file_448---8fe12fcf-3d6b-4b82-a9dd-28f3498820a5.jpg" alt="Akademia" class="client-logo">
+                <img src="fotos/logo-nissan.jpg" alt="Nissan" class="client-logo">
+                <img src="fotos/logo-atsa.jpg" alt="ATSA Birlos y Tuercas" class="client-logo">
+                <img src="fotos/logo-ecochem.jpg" alt="EcoChem Industrial" class="client-logo">
+                <img src="fotos/logo-avantive.jpg" alt="Avantive Solutions" class="client-logo">
+                <img src="fotos/logo-bycenj.jpg" alt="Escuela Normal de Jalisco" class="client-logo">
+                <img src="fotos/logo-akademia.jpg" alt="Akademia" class="client-logo">
             </div>
         </div>
     </section>
