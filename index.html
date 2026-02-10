@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica BEHA — Optometry | Examen de la Vista Gratis en Guadalajara</title>
+    <meta name="description" content="Óptica BEHA — Examen de la vista GRATIS. Armazones de calidad, servicio corporativo y labor social. Guadalajara, Jalisco.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a1628;
+            --blue: #0066cc;
+            --blue-light: #00a8e8;
+            --blue-accent: #4dc9f6;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-600: #475569;
+            --gray-800: #1e293b;
+            --gold: #d4a853;
+            --green: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 0.8rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 40px;
+            border-radius: 8px;
+        }
+
+        .nav-logo-text {
+            color: var(--white);
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .nav-logo-text span {
+            color: var(--blue-light);
+            font-size: 0.7rem;
+            display: block;
+            letter-spacing: 3px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--blue-light); }
+
+        .nav-cta {
+            background: var(--green) !important;
+            color: var(--white) !important;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            font-weight: 600 !important;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--navy) 0%, #0d2137 50%, #0a2a4a 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 168, 232, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 102, 204, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 1.5rem 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(0, 168, 232, 0.1);
+            border: 1px solid rgba(0, 168, 232, 0.25);
+            color: var(--blue-light);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 em {
+            color: var(--blue-light);
+            font-style: normal;
+        }
+
+        .hero-description {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--green), #059669);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 2px solid rgba(255,255,255,0.25);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--blue-light);
+            color: var(--blue-light);
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .hero-card-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-card h3 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-card p {
+            color: var(--blue-light);
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .hero-stat {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+        }
+
+        .hero-stat-number {
+            color: var(--blue-light);
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .hero-stat-label {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== FREE EXAM BANNER ===== */
+        .free-banner {
+            background: linear-gradient(135deg, var(--blue), var(--blue-light));
+            padding: 3rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .free-banner::before {
+            content: '👁️';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -30px;
+            right: 5%;
+        }
+
+        .free-banner h2 {
+            color: var(--white);
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .free-banner p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.15rem;
+            position: relative;
+        }
+
+        .free-banner .pulse-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: var(--green);
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.3); }
+        }
+
+        /* ===== SECTIONS GENERAL ===== */
+        .section {
+            padding: 6rem 1.5rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--blue);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--gray-800);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--gray-600);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== SERVICIOS ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--blue), var(--blue-light));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .service-card:hover::before { transform: scaleX(1); }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--gray-800);
+        }
+
+        .service-card p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ===== LABOR SOCIAL ===== */
+        .social-section {
+            background: var(--gray-50);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .social-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gray-800);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-content p {
+            color: var(--gray-600);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-highlight {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(0, 168, 232, 0.08));
+            border-left: 4px solid var(--blue);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 2rem;
+        }
+
+        .social-highlight p {
+            color: var(--gray-800);
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .social-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .social-img {
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+
+        .social-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .social-img:hover img { transform: scale(1.05); }
+
+        /* ===== CLIENTES ===== */
+        .clients-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .client-logo {
+            height: 60px;
+            opacity: 0.6;
+            filter: grayscale(100%);
+            transition: all 0.3s;
+        }
+
+        .client-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        /* ===== GALERÍA ===== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* ===== UBICACIONES ===== */
+        .locations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .location-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+        }
+
+        .location-card:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .location-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--blue), var(--blue-light));
+            color: var(--white);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--gray-800);
+        }
+
+        .location-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .location-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        .location-info-item span:first-child {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--navy), #0d2137);
+            padding: 5rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(0, 168, 232, 0.1), transparent 50%);
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-facebook {
+            background: #1877F2;
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .btn-facebook:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--navy);
+            padding: 3rem 1.5rem 1.5rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer h4 {
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer p, .footer a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 2;
+        }
+
+        .footer a:hover { color: var(--blue-light); }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 1.5rem auto 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+        }
+
+        .footer-bottom a {
+            color: var(--blue-light);
+            text-decoration: none;
+        }
+
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                padding: 7rem 1.5rem 3rem;
+                text-align: center;
+            }
+
+            .hero h1 { font-size: 2.5rem; }
+            .hero-description { margin: 0 auto 2rem; }
+            .hero-buttons { justify-content: center; }
+
+            .free-banner h2 { font-size: 1.8rem; }
+
+            .services-grid { grid-template-columns: 1fr; }
+
+            .social-grid { grid-template-columns: 1fr; }
+            .social-images { order: -1; }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-item:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 1;
+                aspect-ratio: 16/9;
+            }
+
+            .locations-grid { grid-template-columns: 1fr; }
+
+            .footer-container { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+
+            .section-title { font-size: 2rem; }
+            .cta-section h2 { font-size: 2rem; }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="nav-logo-text">
+                    BEHA
+                    <span>Optometry</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#labor-social">Labor Social</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#ubicaciones">Ubicaciones</a></li>
+                <li><a href="https://wa.me/523324543916?text=Hola,%20me%20gustaría%20agendar%20una%20cita" class="nav-cta" target="_blank">📱 Agendar Cita</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    Examen de la vista GRATIS
+                </div>
+                <h1>Tu visión merece lo <em>mejor</em></h1>
+                <p class="hero-description">
+                    En Óptica BEHA combinamos tecnología de vanguardia con un servicio humano y cercano. 
+                    Armazones de calidad, exámenes profesionales y un compromiso real con nuestra comunidad.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/523324543916?text=Hola,%20me%20gustaría%20agendar%20una%20cita" class="btn-primary" target="_blank">
+                        📱 Agendar por WhatsApp
+                    </a>
+                    <a href="#servicios" class="btn-secondary">
+                        Conocer más →
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-card-icon">👁️</div>
+                    <h3>Examen Visual</h3>
+                    <p>100% Gratuito</p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">500+</div>
+                            <div class="hero-stat-label">Armazones</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">8+</div>
+                            <div class="hero-stat-label">Empresas</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">∞</div>
+                            <div class="hero-stat-label">Compromiso</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREE EXAM BANNER -->
+    <div class="free-banner">
+        <h2>🎉 Examen de la Vista <strong>GRATIS</strong></h2>
+        <p>Agenda tu cita hoy — Horario: Lunes a Sábado de 9:00 AM a 6:00 PM</p>
+    </div>
+
+    <!-- SERVICIOS -->
+    <section class="section" id="servicios">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <div class="section-tag">Nuestros Servicios</div>
+                <h2 class="section-title">Cuidado integral para tu visión</h2>
+                <p class="section-subtitle">Desde el examen hasta tus lentes, te acompañamos en todo el proceso</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔬</div>
+                    <h3>Examen de la Vista</h3>
+                    <p>Evaluación visual completa con equipo profesional. Detección temprana de problemas oculares. <strong>100% gratuito.</strong></p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">👓</div>
+                    <h3>Armazones de Calidad</h3>
+                    <p>Más de 500 modelos para todos los estilos y presupuestos. Desde clásicos hasta las últimas tendencias en moda.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏢</div>
+                    <h3>Servicio Corporativo</h3>
+                    <p>Llevamos nuestros servicios a tu empresa. Exámenes in-situ para empleados con precios especiales para grupos.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔧</div>
+                    <h3>Ajuste y Reparación</h3>
+                    <p>Ajustamos y reparamos tus lentes para que siempre estén en perfectas condiciones. Servicio rápido y confiable.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🕶️</div>
+                    <h3>Lentes de Sol</h3>
+                    <p>Protege tus ojos con estilo. Lentes de sol con graduación disponible y protección UV garantizada.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">❤️</div>
+                    <h3>Labor Social</h3>
+                    <p>Consultas gratuitas en comunidades vulnerables. Porque la buena visión es un derecho, no un privilegio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LABOR SOCIAL -->
+    <section class="section social-section" id="labor-social">
+        <div class="section-container">
+            <div class="social-grid">
+                <div class="social-content fade-in">
+                    <div class="section-tag">Nuestro Compromiso</div>
+                    <h3>Visión para todos, sin excepción</h3>
+                    <p>
+                        En Óptica BEHA creemos que ver bien no debería ser un lujo. 
+                        Por eso llevamos nuestros servicios a comunidades marginadas, 
+                        ofreciendo consultas gratuitas y apoyo con lentes a quienes más lo necesitan.
+                    </p>
+                    <div class="social-highlight">
+                        <p>💙 Realizamos brigadas visuales en colonias populares, escuelas y centros comunitarios de Guadalajara y sus alrededores.</p>
+                    </div>
+                    <p>
+                        No solo vendemos lentes — construimos una comunidad con mejor visión. 
+                        Cada par de armazones que compras nos ayuda a seguir llevando este servicio 
+                        a quienes no pueden pagarlo.
+                    </p>
+                </div>
+                <div class="social-images fade-in">
+                    <div class="social-img">
+                        <img src="fotos/file_434---465f0b84-f5b8-473d-b5ac-72e4dbdae9a6.jpg" alt="Brigada visual en comunidad" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
+                    </div>
+                    <div class="social-img">
+                        <img src="fotos/file_435---7d71454e-c6f3-4e5e-a2b2-ddf5724e7952.jpg" alt="Examen visual comunitario" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
+                    </div>
+                    <div class="social-img">
+                        <img src="fotos/file_433---71a02ea9-1178-45cc-a281-1115b3e7cb54.jpg" alt="Servicio en comunidad" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
+                    </div>
+                    <div class="social-img">
+                        <img src="fotos/file_436---3edc585b-9243-4901-bca2-2ff270a8ac9f.jpg" alt="Consulta comunitaria" onerror="this.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'; this.style.display='block'; this.alt=''">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section" id="galeria">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <div class="section-tag">Galería</div>
+                <h2 class="section-title">Nuestro trabajo habla por sí mismo</h2>
+                <p class="section-subtitle">Desde nuestra óptica hasta las brigadas comunitarias</p>
+            </div>
+            <div class="gallery-grid fade-in">
+                <div class="gallery-item">
+                    <img src="fotos/file_437---9d807675-045a-4aa1-8acd-5dc30561d207.jpg" alt="Colección de armazones" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/file_432---7cb94c70-e882-41b3-868b-68966b6f607e.jpg" alt="Servicio corporativo" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/file_442---d685a251-5405-4b13-9eac-6c8ccce39b69.jpg" alt="Atención en empresa" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/file_444---5d4ade8a-d3f8-42c6-aa87-2eb761d5a9a6.jpg" alt="Consulta en óptica" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/file_446---379dccdd-b530-4650-baad-fbaf8406d294.jpg" alt="Fachada Óptica BEHA" onerror="this.parentElement.style.background='linear-gradient(135deg, #e2e8f0, #f1f5f9)'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTES CORPORATIVOS -->
+    <section class="section social-section" id="clientes">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <div class="section-tag">Confían en Nosotros</div>
+                <h2 class="section-title">Empresas e instituciones que nos respaldan</h2>
+                <p class="section-subtitle">Brindamos servicio óptico corporativo a empresas líderes de la región</p>
+            </div>
+            <div class="clients-grid fade-in">
+                <img src="fotos/file_445---d5e43d9a-dd44-47b4-b5bc-d36cfce46710.jpg" alt="Nissan" class="client-logo">
+                <img src="fotos/file_439---2131e293-0e53-428e-91b6-5a75cdb2548e.jpg" alt="ATSA Birlos y Tuercas" class="client-logo">
+                <img src="fotos/file_440---3a1e16cc-7efb-4038-b77f-036a6fba4495.jpg" alt="EcoChem Industrial" class="client-logo">
+                <img src="fotos/file_441---c2d586b4-68a8-4185-87b7-40df0b5c14e8.jpg" alt="Avantive Solutions" class="client-logo">
+                <img src="fotos/file_443---400d3eda-fbef-4cfc-8a9b-584963923487.jpg" alt="Escuela Normal de Jalisco" class="client-logo">
+                <img src="fotos/file_448---8fe12fcf-3d6b-4b82-a9dd-28f3498820a5.jpg" alt="Akademia" class="client-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIONES -->
+    <section class="section" id="ubicaciones">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <div class="section-tag">Encuéntranos</div>
+                <h2 class="section-title">Nuestras ubicaciones</h2>
+                <p class="section-subtitle">Dos sucursales para estar más cerca de ti</p>
+            </div>
+            <div class="locations-grid fade-in">
+                <div class="location-card">
+                    <div class="location-tag">Sucursal Jardines</div>
+                    <h3>Jardines de San José</h3>
+                    <div class="location-info">
+                        <div class="location-info-item">
+                            <span>📍</span>
+                            <span>Isla Hébridas #3485, Jardines de San José, Guadalajara, Jalisco</span>
+                        </div>
+                        <div class="location-info-item">
+                            <span>📱</span>
+                            <span><a href="tel:+523324543916" style="color: inherit; text-decoration: none;">33 2454 3916</a></span>
+                        </div>
+                        <div class="location-info-item">
+                            <span>🕐</span>
+                            <span>Lunes a Sábado — 9:00 AM a 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div class="location-tag">Sucursal 18 de Marzo</div>
+                    <h3>Colonia 18 de Marzo</h3>
+                    <div class="location-info">
+                        <div class="location-info-item">
+                            <span>📍</span>
+                            <span>Vasco de Gama No. 2740, Col. 18 de Marzo, entre Colón y López de Legazpi</span>
+                        </div>
+                        <div class="location-info-item">
+                            <span>📱</span>
+                            <span><a href="tel:+523328169571" style="color: inherit; text-decoration: none;">33 2816 9571</a></span>
+                        </div>
+                        <div class="location-info-item">
+                            <span>🕐</span>
+                            <span>Lunes a Sábado — 9:00 AM a 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>¿Listo para ver el mundo con claridad?</h2>
+        <p>Agenda tu examen de la vista gratuito hoy mismo</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/523324543916?text=Hola,%20me%20gustaría%20agendar%20una%20cita" class="btn-whatsapp" target="_blank">
+                📱 WhatsApp
+            </a>
+            <a href="https://www.facebook.com/share/1CA57NUSA1/?mibextid=wwXIfr" class="btn-facebook" target="_blank">
+                📘 Facebook
+            </a>
+            <a href="tel:+523324543916" class="btn-secondary">
+                📞 Llamar Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>Óptica BEHA — Optometry</h4>
+                <p>Tu visión es nuestra prioridad. Más que una óptica, somos una comunidad comprometida con la salud visual de Guadalajara y sus alrededores.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>
+                    <a href="tel:+523324543916">📱 33 2454 3916</a><br>
+                    <a href="tel:+523328169571">📱 33 2816 9571</a><br>
+                    <a href="https://www.facebook.com/share/1CA57NUSA1/" target="_blank">📘 Facebook</a>
+                </p>
+            </div>
+            <div>
+                <h4>Horario</h4>
+                <p>
+                    Lunes a Sábado<br>
+                    9:00 AM — 6:00 PM<br><br>
+                    Domingo: Cerrado
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Óptica BEHA — Todos los derechos reservados</span>
+            <span>Diseñado por <a href="https://ytuweb.mx" target="_blank">¿Y Tu Web?</a></span>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/523324543916?text=Hola,%20me%20gustaría%20agendar%20una%20cita" class="whatsapp-float" target="_blank" title="Envíanos un WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
